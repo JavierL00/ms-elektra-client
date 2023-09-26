@@ -1,0 +1,38 @@
+openapi: 3.0.1
+info:
+  title: "OpenAPI definition"
+  version: v0
+servers:
+  - url: http://localhost:9090
+    description: Generated server url
+paths:
+  /client/id:
+    post:
+      tags:
+        - client
+      summary: Get client by id
+      description: Get client by id
+      operationId: getClientById
+      parameters: []
+      requestBody:
+        description: Client id
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClientIdentifierDto"
+        required: true
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+components:
+  schemas:
+    ClientIdentifierDto:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
