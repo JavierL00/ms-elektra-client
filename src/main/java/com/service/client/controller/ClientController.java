@@ -51,18 +51,13 @@ public class ClientController {
     ) throws Exception {
         log.info("MS Elektra Client [saveClient] ---> input: {}", input);
 
-        if (input == null) {
-            log.error("MS Elektra Client [saveClient] ---> input error: {}", "input is null");
-            throw new Exception("input is null");
-        } else {
+        try {
             ClientEntity client = clientRepository.findClientEntityByName(input.getName());
             if (client != null) {
                 log.error("MS Elektra Client [saveClient] ---> input error: {}", "El cliente ya existe");
                 throw new Exception("El cliente ya existe");
             }
-        }
 
-        try {
             ClientEntity clientEntity = mapper.toEntity(input);
             clientEntity = clientRepository.save(clientEntity);
             ClientDtoResponse response = new ClientDtoResponse();
