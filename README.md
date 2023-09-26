@@ -32,6 +32,6 @@ Se puede encontrar la configurar adecuada como las propiedades de la base de dat
 
 ## Ejecución
 
-Para ejecutar el microservicio se usa Maven. El microservicio estará disponible en `http://localhost:9010` por defecto.
+El microservicio estará disponible en `http://localhost:9090` por defecto.
 
 
