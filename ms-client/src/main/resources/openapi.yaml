@@ -12,36 +12,36 @@ paths:
         - client-controller
       operationId: saveClient
       requestBody:
-        required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ClientDtoRequest'
+              $ref: "#/components/schemas/ClientDtoRequest"
+        required: true
       responses:
         '200':
           description: OK
           content:
             '*/*':
               schema:
-                $ref: '#/components/schemas/ClientDtoResponse'
+                $ref: "#/components/schemas/ClientDtoResponse"
   /client/id:
     post:
       tags:
         - client-controller
       operationId: getClientById
       requestBody:
-        required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ClientIdentifierDtoRequest'
+              $ref: "#/components/schemas/ClientIdentifierDtoRequest"
+        required: true
       responses:
         '200':
           description: OK
           content:
             '*/*':
               schema:
-                $ref: '#/components/schemas/ClientEntity'
+                $ref: "#/components/schemas/ClientEntity"
 components:
   schemas:
     ClientDtoRequest:

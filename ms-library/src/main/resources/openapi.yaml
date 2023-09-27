@@ -12,18 +12,18 @@ paths:
         - library-controller
       operationId: getLibraryById
       requestBody:
-        required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/LibraryIdentifierDtoRequest'
+              $ref: "#/components/schemas/LibraryIdentifierDtoRequest"
+        required: true
       responses:
         '200':
           description: OK
           content:
             '*/*':
               schema:
-                $ref: '#/components/schemas/LibraryDtoResponse'
+                $ref: "#/components/schemas/LibraryDtoResponse"
 components:
   schemas:
     LibraryIdentifierDtoRequest:
@@ -32,16 +32,6 @@ components:
         id:
           type: integer
           format: int64
-        name:
-          type: string
-        author:
-          type: integer
-          format: int64
-        editorial:
-          type: string
-        publicationDate:
-          type: string
-          format: date
     ClientDtoResponse:
       type: object
       properties:
@@ -72,7 +62,7 @@ components:
         name:
           type: string
         author:
-          $ref: '#/components/schemas/ClientDtoResponse'
+          $ref: "#/components/schemas/ClientDtoResponse"
         editorial:
           type: string
         publicationDate:
