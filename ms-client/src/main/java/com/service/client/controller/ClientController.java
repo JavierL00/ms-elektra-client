@@ -24,7 +24,7 @@ public class ClientController {
     private final IClientMapper mapper;
 
     @PostMapping("/id")
-    ResponseEntity<ClientEntity> getClientById(
+    public ResponseEntity<ClientEntity> getClientById(
             @RequestBody ClientIdentifierDtoRequest input
     ) throws Exception {
         log.info("MS Elektra Client [getClientById] ---> input: {}", input);
@@ -46,7 +46,7 @@ public class ClientController {
     }
 
     @PostMapping("/save")
-    ResponseEntity<ClientDtoResponse> saveClient(
+    public ResponseEntity<ClientDtoResponse> saveClient(
             @RequestBody @Valid ClientDtoRequest input
     ) throws Exception {
         log.info("MS Elektra Client [saveClient] ---> input: {}", input);

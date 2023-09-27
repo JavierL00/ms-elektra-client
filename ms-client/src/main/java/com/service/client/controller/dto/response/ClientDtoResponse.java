@@ -1,10 +1,8 @@
 package com.service.client.controller.dto.response;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class ClientDtoResponse {
     private Long clientId;
 }
