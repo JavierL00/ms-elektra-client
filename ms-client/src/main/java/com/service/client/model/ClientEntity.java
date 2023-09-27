@@ -1,9 +1,7 @@
 package com.service.client.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,12 +15,10 @@ import javax.persistence.UniqueConstraint;
 import java.time.LocalDate;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "client", uniqueConstraints = {
-    @UniqueConstraint(columnNames = "name")
+        @UniqueConstraint(columnNames = "name")
 })
 public class ClientEntity {
     @Id

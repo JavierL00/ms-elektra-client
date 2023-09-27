@@ -1,0 +1,80 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:9070
+    description: Generated server url
+paths:
+  /library/id:
+    post:
+      tags:
+        - library-controller
+      operationId: getLibraryById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LibraryIdentifierDtoRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/LibraryDtoResponse'
+components:
+  schemas:
+    LibraryIdentifierDtoRequest:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        author:
+          type: integer
+          format: int64
+        editorial:
+          type: string
+        publicationDate:
+          type: string
+          format: date
+    ClientDtoResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        firstSurname:
+          type: string
+        secondSurname:
+          type: string
+        birthDate:
+          type: string
+          format: date
+        gender:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+    LibraryDtoResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        author:
+          $ref: '#/components/schemas/ClientDtoResponse'
+        editorial:
+          type: string
+        publicationDate:
+          type: string
+          format: date

@@ -1,4 +1,4 @@
-package com.service.client.exception;
+package com.example.mslibrary.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
