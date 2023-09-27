@@ -35,6 +35,7 @@ Se puede encontrar la configurar adecuada como las propiedades de la base de dat
 
 ## Ejecución
 
+* Los scripts para la BD se encuentran en la carpeta `sql`, el archivo `import.sql`. Con el script para la creacion de tablas y el script para la insercion de datos de prueba.
 * El microservicio client estará disponible en `http://localhost:9090` por defecto.
 * El microservicio library estará disponible en `http://localhost:9070` por defecto.
 
