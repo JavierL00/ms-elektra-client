@@ -1,5 +1,6 @@
 package com.example.mslibrary.controller.dto.response;
 
+import com.example.mslibrary.controller.feign.dto.ClientDtoResponse;
 import lombok.Data;
 
 import java.time.LocalDate;

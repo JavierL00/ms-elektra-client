@@ -1,4 +1,4 @@
-package com.example.mslibrary.controller.dto.response;
+package com.example.mslibrary.controller.feign.dto;
 
 import lombok.Data;
 

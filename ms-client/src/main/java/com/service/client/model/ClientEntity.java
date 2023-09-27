@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @Table(name = "client", uniqueConstraints = {
-    @UniqueConstraint(columnNames = "name")
+        @UniqueConstraint(columnNames = "name")
 })
 public class ClientEntity {
     @Id
