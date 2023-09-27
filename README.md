@@ -32,6 +32,7 @@ Se puede encontrar la configurar adecuada como las propiedades de la base de dat
 
 ## Ejecución
 
-El microservicio estará disponible en `http://localhost:9090` por defecto.
+* El microservicio client estará disponible en `http://localhost:9090` por defecto.
+* El microservicio library estará disponible en `http://localhost:9080` por defecto.
 
 
