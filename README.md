@@ -24,7 +24,10 @@ Este microservicio se encarga de gestionar la información de los clientes, sepa
 
 ## Documentación de la API
 
-La documentación de la API se encuentra en un contrato de interfaz YAML con el estándar OpenAPI 2.0. Puedes encontrarlo en el archivo `openapi.yaml`.
+La documentación de la API se encuentra en un contrato de interfaz YAML con el estándar OpenAPI 2.0.
+* Puedes encontrarlo en el archivo `openapi.yaml`.
+* Puedes visualizar el de clientes en http://localhost:9090/swagger-ui/index.html#.
+* Puedes visualizar el de libreria en http://localhost:9070/swagger-ui/index.html#.
 
 ## Configuración
 
@@ -33,6 +36,6 @@ Se puede encontrar la configurar adecuada como las propiedades de la base de dat
 ## Ejecución
 
 * El microservicio client estará disponible en `http://localhost:9090` por defecto.
-* El microservicio library estará disponible en `http://localhost:9080` por defecto.
+* El microservicio library estará disponible en `http://localhost:9070` por defecto.
 
 
