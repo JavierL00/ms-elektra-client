@@ -1,0 +1,2 @@
+create table client(id bigserial primary key, birth_date date not null, email varchar(255) not null, first_surname varchar(255) not null, gender varchar(255) not null, name varchar(255) not null constraint ukdn5jasds5r1j3ewo5k3nhwkkq unique, phone varchar(255) not null, second_surname varchar(255) not null);
+alter table client owner to postgres;
